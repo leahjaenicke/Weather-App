@@ -81,9 +81,4 @@ function locationTemp(response) {
   let newTown = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${newTown}`;
-
-  if (response.data.weather[0].description === "snow") {
-    let emoji = document.querySelector("#c-emoji");
-    emoji.innerHTML = `❄️`;
-  }
 }
