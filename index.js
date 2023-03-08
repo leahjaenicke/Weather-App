@@ -44,7 +44,7 @@ function searchEngine(event) {
   axios.get(apiUrl).then(locationTemp);
 }
 
-let h1 = document.querySelector("#city-form");
+let h1 = document.querySelector(".cityForm");
 h1.addEventListener("submit", searchEngine);
 
 function buttonLocation(position) {
