@@ -56,8 +56,7 @@ function buttonLocation(position) {
 }
 
 let current = document.querySelector("#loca-button");
-current.addEventListener(
-  "click",
+current.addEventListener("click", () =>
   navigator.geolocation.getCurrentPosition(buttonLocation)
 );
 

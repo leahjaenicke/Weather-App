@@ -45,17 +45,20 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 span {
   font-size: 50px;
 }
 
-footer {
-  font-size: 15px;
+small {
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 50%;
-  margin-left: -78.5px;
+  margin-left: -100px;
+}
+.currentWeather {
+  font-weight: bolder;
 }
 .current-type {
   font-size: 20px;
@@ -80,7 +83,7 @@ footer {
   background: #fff;
   border-radius: 10px;
   margin: 20px auto;
-  margin-top: 70px;
+  margin-top: 50px;
   padding: 30px;
   width: 100%;
   max-width: 600px;
