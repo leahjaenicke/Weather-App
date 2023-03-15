@@ -80,4 +80,10 @@ function locationTemp(response) {
   let newTown = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${newTown}`;
+
+  let iconSelect = document.querySelector("#c-emoji");
+  iconSelect.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }

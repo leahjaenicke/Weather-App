@@ -19,6 +19,10 @@
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d3d109f8aa.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -54,19 +58,23 @@
 
       <div class="row currentWeather">
         <div class="col">
-          <span>☀️</span>
+          <i class="fa-solid fa-temperature-arrow-up arrow-icon"></i>
           <br />
           highs of
           <div class="farenhite" id="highs-of">9°C</div>
         </div>
         <div class="col">
-          <span>🌤️ </span>
+          <i class="fa-solid fa-temperature-arrow-down arrow-icon"></i>
           <br />
           lows of
           <div id="lows-of">7°C</div>
         </div>
         <div class="col">
-          <span id="c-emoji">🌦️ </span><br />currently
+          <img
+            id="c-emoji"
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+          />
+          <br />currently
           <div id="currently">8°C</div>
         </div>
         <div class="col">
