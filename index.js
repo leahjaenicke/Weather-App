@@ -81,6 +81,10 @@ function locationTemp(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${newTown}`;
 
+  let wind = Math.round(response.data.wind.speed);
+  let newValueiiiii = document.querySelector("#wind-speed");
+  newValueiiiii.innerHTML = `Wind:${wind}km/h`;
+
   let iconSelect = document.querySelector("#c-emoji");
   iconSelect.setAttribute(
     "src",
