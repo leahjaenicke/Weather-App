@@ -44,6 +44,10 @@ form {
   top: -50px;
 }
 
+.form-control {
+  background-color: #daf4f5;
+}
+
 div {
   text-align: center;
 }
