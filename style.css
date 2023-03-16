@@ -21,8 +21,8 @@ button:hover {
   background: #80a3a2;
 }
 
-.newButton {
-  color: #80a3a2;
+.clicked {
+  border: solid#80a3a2 1px;
   background: #daf4f5;
 }
 

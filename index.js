@@ -99,6 +99,9 @@ function locationTemp(response) {
 function newFaren(event) {
   let farnhiteNew = document.querySelector("#currently");
 
+  celciusConversion.classList.remove("clicked");
+  farenhiteConversion.classList.add("clicked");
+
   let ftemp = Math.round((celtemp * 9) / 5 + 32);
   farnhiteNew.innerHTML = `${ftemp}°F`;
 
@@ -112,6 +115,9 @@ function newFaren(event) {
 }
 
 function newCel(event) {
+  celciusConversion.classList.add("clicked");
+  farenhiteConversion.classList.remove("clicked");
+
   let returnedCelcius = document.querySelector("#currently");
   returnedCelcius.innerHTML = `${celtemp}°C`;
 
