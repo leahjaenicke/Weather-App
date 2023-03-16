@@ -27,7 +27,14 @@
 
   <body>
     <div class="container shadow">
-      <button class="btn btn-outline-secondary" id="celcius-button">C°</button>
+      <button
+        type=" button"
+        class="btn btn-outline-secondary"
+        class="newButton"
+        id="celcius-button"
+      >
+        C°
+      </button>
       <button class="btn btn-outline-secondary" id="farenhite-button">
         F°
       </button>
@@ -35,7 +42,7 @@
         Current location 📍
       </button>
       <h5>Current weather in</h5>
-      <h1 id="changed-city">London</h1>
+      <h1 id="changed-city"></h1>
 
       <form class="cityForm" id="form-row ">
         <div class="row">
@@ -61,13 +68,13 @@
           <i class="fa-solid fa-temperature-arrow-up arrow-icon"></i>
           <br />
           highs of
-          <div class="farenhite" id="highs-of">9°C</div>
+          <div class="farenhite" id="highs-of"></div>
         </div>
         <div class="col">
           <i class="fa-solid fa-temperature-arrow-down arrow-icon"></i>
           <br />
           lows of
-          <div id="lows-of">7°C</div>
+          <div id="lows-of"></div>
         </div>
         <div class="col">
           <img
@@ -75,14 +82,14 @@
             src="https://openweathermap.org/img/wn/10d@2x.png"
           />
           <br />currently
-          <div id="currently">8°C</div>
+          <div id="currently"></div>
         </div>
         <div class="col">
           <span id="date-year">10/02</span>
           <br />
           <span id="date-time">21:48</span>
-          <div class="current-type">Mostly cloudy</div>
-          <div id="wind-speed">Wind: 50km/h</div>
+          <div class="current-type"></div>
+          <div id="wind-speed"></div>
         </div>
       </div>
 
@@ -133,6 +140,7 @@
       >
       <strong> by Leah Jaenicke</strong>
     </small>
+
     <script src="index.js"></script>
   </body>
 </html>
