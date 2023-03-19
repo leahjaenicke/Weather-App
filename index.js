@@ -60,6 +60,32 @@ current.addEventListener("click", () =>
   navigator.geolocation.getCurrentPosition(buttonLocation)
 );
 
+function futureForecast() {
+  let newfutureForecast = document.querySelector(".future-temperature");
+
+  let forecastInject = `<div class="row">`;
+  let weekdays = ["Mon", "Tue", "Thu", "Fri", "Sat"];
+  weekdays.forEach(function (day) {
+    forecastInject =
+      forecastInject +
+      ` 
+          <div class="col">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              width="70px"
+            />
+            <br />
+            ${day} <br />11° <span id="shaded-number">6°</span>
+          </div>
+       
+      `;
+  });
+
+  forecastInject = forecastInject + `</div>`;
+  newfutureForecast.innerHTML = forecastInject;
+}
+futureForecast();
+
 function locationTemp(response) {
   let newHigh = Math.round(response.data.main.temp_max);
   let newValue = document.querySelector("#highs-of");
