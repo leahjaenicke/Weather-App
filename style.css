@@ -57,10 +57,6 @@ ul {
   padding: 0;
 }
 
-span {
-  font-size: 50px;
-}
-
 small {
   text-align: center;
   position: fixed;
@@ -105,4 +101,9 @@ small {
   margin-top: 10px;
   margin-bottom: 2px;
   padding: 20px;
+}
+
+#shaded-number {
+  opacity: 60%;
+  line-height: 40px;
 }
