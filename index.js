@@ -64,7 +64,7 @@ function newDays(numberDay) {
   let newDay = new Date(numberDay * 1000);
   let date = newDay.getDay();
   let weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
+  const removeFirst = weekday.shift();
   return weekday[date];
 }
 

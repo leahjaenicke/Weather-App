@@ -39,10 +39,6 @@ form {
   top: -50px;
 }
 
-.form-control {
-  background-color: #daf4f5;
-}
-
 div {
   text-align: center;
 }
@@ -54,6 +50,9 @@ small {
   left: 50%;
   margin-left: -100px;
 }
+.form-control {
+  background-color: #daf4f5;
+}
 .currentWeather {
   font-weight: bolder;
 }
@@ -62,8 +61,7 @@ small {
   border: solid 1px #abcecf;
   border-radius: 10px;
 }
-.future-temp {
-  font-size: 15px;
+.future-temperature {
   border: solid 0.5px #abcecf;
   border-radius: 10px;
   padding: 5px;
@@ -96,4 +94,8 @@ small {
 #shaded-number {
   opacity: 60%;
   line-height: 40px;
+}
+
+#loca-button {
+  left: -190px;
 }
