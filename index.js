@@ -140,49 +140,7 @@ function locationTemp(response) {
   );
 
   getFutureForcast(response.data.coord);
-
-  celtemp = newNormal;
-  highT = newHigh;
-  lowT = newLow;
 }
-
-function newFaren(event) {
-  let farnhiteNew = document.querySelector("#currently");
-
-  celciusConversion.classList.remove("clicked");
-  farenhiteConversion.classList.add("clicked");
-
-  let ftemp = Math.round((celtemp * 9) / 5 + 32);
-  farnhiteNew.innerHTML = `${ftemp}°F`;
-
-  let highnew = document.querySelector("#highs-of");
-  let hightemp = Math.round((highT * 9) / 5 + 32);
-  highnew.innerHTML = `${hightemp}°F`;
-
-  let lownew = document.querySelector("#lows-of");
-  let lowtemp = Math.round((lowT * 9) / 5 + 32);
-  lownew.innerHTML = `${lowtemp}°F`;
-}
-
-function newCel(event) {
-  celciusConversion.classList.add("clicked");
-  farenhiteConversion.classList.remove("clicked");
-
-  let returnedCelcius = document.querySelector("#currently");
-  returnedCelcius.innerHTML = `${celtemp}°C`;
-
-  let returnedCelciushigh = document.querySelector("#highs-of");
-  returnedCelciushigh.innerHTML = `${highT}°C`;
-
-  let returnedCelciuslow = document.querySelector("#lows-of");
-  returnedCelciuslow.innerHTML = `${lowT}°C`;
-}
-
-let farenhiteConversion = document.querySelector("#farenhite-button");
-farenhiteConversion.addEventListener("click", newFaren);
-
-let celciusConversion = document.querySelector("#celcius-button");
-celciusConversion.addEventListener("click", newCel);
 
 function search(newCity) {
   let apiKey = "5863935ee9cca4c02ed68203f807c65b";
