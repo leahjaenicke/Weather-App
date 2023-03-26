@@ -60,7 +60,8 @@ current.addEventListener("click", () =>
   navigator.geolocation.getCurrentPosition(buttonLocation)
 );
 
-function futureForecast() {
+function futureForecast(response) {
+  console.log(response.data.daily);
   let newfutureForecast = document.querySelector(".future-temperature");
 
   let forecastInject = `<div class="row">`;
@@ -84,7 +85,12 @@ function futureForecast() {
   forecastInject = forecastInject + `</div>`;
   newfutureForecast.innerHTML = forecastInject;
 }
-futureForecast();
+
+function getFutureForcast(coordinates) {
+  let apiKey = "5863935ee9cca4c02ed68203f807c65b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(futureForecast);
+}
 
 function locationTemp(response) {
   let newHigh = Math.round(response.data.main.temp_max);
@@ -116,6 +122,8 @@ function locationTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getFutureForcast(response.data.coord);
 
   celtemp = newNormal;
   highT = newHigh;
