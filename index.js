@@ -15,6 +15,17 @@ function newTime() {
     "12",
   ];
 
+  let weekDay = [
+    "Sunday",
+    "Monday",
+    "Tue",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let newWeekDay = weekDay[now.getDay()];
   let currentMonth = months[now.getMonth()];
   let currentDate = now.getDate();
   let currentHour = now.getHours();
@@ -25,6 +36,9 @@ function newTime() {
   if (currentDate < 10) {
     currentDate = `0${currentDate}`;
   }
+
+  let todaysDay = document.querySelector("#day-week");
+  todaysDay.innerHTML = `${newWeekDay}`;
   let changeTime = document.querySelector("#date-year");
   changeTime.innerHTML = `${currentDate}/${currentMonth}`;
 
