@@ -60,26 +60,42 @@ current.addEventListener("click", () =>
   navigator.geolocation.getCurrentPosition(buttonLocation)
 );
 
+function newDays(numberDay) {
+  let newDay = new Date(numberDay * 1000);
+  let date = newDay.getDay();
+  let weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return weekday[date];
+}
+
 function futureForecast(response) {
-  console.log(response.data.daily);
+  let weekdays = response.data.daily;
   let newfutureForecast = document.querySelector(".future-temperature");
 
   let forecastInject = `<div class="row">`;
-  let weekdays = ["Mon", "Tue", "Thu", "Fri", "Sat"];
-  weekdays.forEach(function (day) {
-    forecastInject =
-      forecastInject +
-      ` 
+
+  weekdays.forEach(function (newForecast, index) {
+    if (index < 5) {
+      forecastInject =
+        forecastInject +
+        ` 
           <div class="col">
             <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
+              src="https://openweathermap.org/img/wn/${
+                newForecast.weather[0].icon
+              }@2x.png"
               width="70px"
             />
             <br />
-            ${day} <br />11° <span id="shaded-number">6°</span>
+            ${newDays(newForecast.dt)} <br />${Math.round(
+          newForecast.temp.max
+        )}° <span id="shaded-number">${Math.round(
+          newForecast.temp.min
+        )}° </span>
           </div>
        
       `;
+    }
   });
 
   forecastInject = forecastInject + `</div>`;
